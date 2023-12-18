@@ -14,7 +14,7 @@ module.exports = () => {
 			filename: '[name].bundle.js',
 			path: path.resolve(__dirname, 'dist')
 		},
-		devServer: {
+devServer: {
 			hot: 'only'
 		},
 		plugins: [
@@ -28,8 +28,8 @@ module.exports = () => {
 				description: 'A simple text editor',
 				background_color: '#7eb4e2',
 				theme_color: '#7eb4e2',
-				start_url: '/',
-				publicPath: '/',
+				start_url: './',
+				publicPath: './',
 				fingerprints: false,
 				inject: true,
 				icons: [
@@ -58,7 +58,7 @@ module.exports = () => {
 				},
 				{
 					test: /\.m?js$/,
-					exclude: /(node_modules|bower_components)/,
+					exclude: /node_modules/,
 					use: {
 						loader: 'babel-loader',
 						options: {
